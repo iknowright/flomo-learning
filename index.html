@@ -1,20 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <script src="main.js"></script>
+    <title>Flomo E-learning</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link rel="stylesheet" href="data/css/bootstrap.css">
+    <script src="data/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="data/js/bootstrap.bundle.js"></script>
+    <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
 </head>
 <body>
-    <a href="Unit1/B1U1/index.html" target="_blank">B1U1</a>
-    <a href="Unit1/B1U2/index.html" target="_blank">B1U2</a>
-    <a href="Unit1/B1U3/index.html" target="_blank">B1U3</a>
-    <a href="Unit1/B1U4/index.html" target="_blank">B1U4</a>
-    <a href="Unit1/B1U5/index.html" target="_blank">B1U5</a>
-    <a href="Unit1/B1U6/index.html" target="_blank">B1U6</a>
-    <a href="Unit1/B1U7/index.html" target="_blank">B1U7</a>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="{% url 'home' %}"><img src="logobanner_big.jpg" class="rounded mx-auto d-block" height="30" alt="logoimage"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> 
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            About
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{% url 'about' 1 %}">Story Of FLOMO Foundation</a>
+                            <a class="dropdown-item" href="{% url 'about' 2 %}">Charity Foundation of Mrs. Z.S. Shen</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            News
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{% url 'genrelist' 'latest_news' %}">Latest News</a>
+                            <a class="dropdown-item" href="{% url 'genrelist' 'report_news' %}">Report News</a>
+                            <a class="dropdown-item" href="{% url 'genrelist' 'event_news' %}">Event News</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <a href="http://www.flomo.org.tw/Default.aspx" class="btn btn-outline-primary" role="button" aria-pressed="true">中文</a>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <div class="books"></div>
 </body>
+<link rel="stylesheet" href="data/css/style.css" type="text/css" media="all" />
+<script src="data/js/app.js" type="text/javascript" charset="utf-8"></script>
 </html>
