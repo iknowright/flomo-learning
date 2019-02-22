@@ -7,7 +7,7 @@ for (i = 0; i < 6; i++) {
     $(".bookthumbnail"+ (i+1)).append("<img  src=\"data\\images\\book" + (i+1) + ".jpg\" alt=\"book\">");
     var links = "";
     for (j = 0; j < 7; j++) {
-        links = links+"<p><a href=\"Unit"+(i+1)+"\\B"+(i+1)+"U"+(j+1)+"\\index.html\" target=\"_blank\">B"+(i+1)+"U"+(j+1)+"</a></p>"
+        links = links+"<p><a href=\"Book"+(i+1)+"\\B"+(i+1)+"U"+(j+1)+"\\index.html\" target=\"_blank\">B"+(i+1)+"U"+(j+1)+"</a></p>"
     }
     $(".list"+ (i+1)).append(links);
 }
